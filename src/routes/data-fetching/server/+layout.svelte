@@ -1,4 +1,4 @@
 <main>
-	<h1>Layout</h1>
-	<slot />
+  <h1>Layout</h1>
+  <slot />
 </main>

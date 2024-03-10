@@ -1,24 +1,24 @@
-import type { PageServerLoad, Actions } from './$types';
+import type { PageServerLoad, Actions } from "./$types"
 
-const key = 'name';
+const key = "name"
 
 export const load = (async ({ cookies }) => {
-	const name = cookies.get(key);
+  const name = cookies.get(key)
 
-	return {
-		name
-	};
-}) satisfies PageServerLoad;
+  return {
+    name,
+  }
+}) satisfies PageServerLoad
 
 export const actions: Actions = {
-	// we can also use default action here
-	rename: async ({ cookies, request }) => {
-		const form = await request.formData();
-		const name = (form.get(key) || '') as string;
+  // we can also use default action here
+  rename: async ({ cookies, request }) => {
+    const form = await request.formData()
+    const name = (form.get(key) || "") as string
 
-		cookies.set(key, name, { path: '/' });
-	},
-	'upper-case': async ({ cookies }) => {
-		cookies.set(key, (cookies.get(key) as string)?.toUpperCase(), { path: '/' });
-	}
-};
+    cookies.set(key, name, { path: "/" })
+  },
+  "upper-case": async ({ cookies }) => {
+    cookies.set(key, (cookies.get(key) as string)?.toUpperCase(), { path: "/" })
+  },
+}

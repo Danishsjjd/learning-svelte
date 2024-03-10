@@ -1,17 +1,17 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+  import { onMount } from "svelte"
 
-	let count = 0;
-	let user: { name: string };
+  let count = 0
+  let user: { name: string }
 
-	onMount(async () => {
-		user = await fetch('https://jsonplaceholder.typicode.com/users/1').then((data) => data.json());
-		console.log('will only run on client', user);
-	});
+  onMount(async () => {
+    user = await fetch("https://jsonplaceholder.typicode.com/users/1").then((data) => data.json())
+    console.log("will only run on client", user)
+  })
 </script>
 
 <button on:click={() => (count += 1)}>
-	Count {count}
+  Count {count}
 </button>
 
 <h1>{user?.name}</h1>

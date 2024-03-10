@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+  import { page } from "$app/stores"
 </script>
 
 <h1>
-	{$page.status}: {$page.error?.message}
+  {$page.status}: {$page.error?.message}
 </h1>
