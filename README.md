@@ -1,7 +1,5 @@
 # create-svelte
 
-Check _different_ branches to see the learning progress!
-
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
 ## Creating a project
